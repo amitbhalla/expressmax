@@ -1,4 +1,7 @@
+import path from 'path';
+
 import express from 'express';
+
 import adminRoutes from './routes/admin.js';
 import shopRoutes from './routes/shop.js';
 
@@ -17,7 +20,7 @@ app.use('/', shopRoutes);
 // 404
 app.use((req, res, next) => {
   res.status(404);
-  res.send('<h3>404 - Page not found!</h3>');
+  res.sendFile(path.join(path.resolve(), 'views', '404.html'));
 });
 
 //  Listen
