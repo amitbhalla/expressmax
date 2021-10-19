@@ -1,5 +1,4 @@
 import path from 'path';
-
 import express from 'express';
 
 import adminRoutes from './routes/admin.js';
