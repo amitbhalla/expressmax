@@ -11,6 +11,7 @@ const app = express();
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(path.resolve(), 'public')));
 
 // Routes
 app.use('/admin', adminRoutes);
